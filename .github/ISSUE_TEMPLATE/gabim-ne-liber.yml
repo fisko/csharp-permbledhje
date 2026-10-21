@@ -1,0 +1,53 @@
+name: Gabim në libër ose në kod
+description: Raporto një gabim në tekstin e librit, në kod, ose në daljen e shtypur.
+title: "[Gabim] Faqja ___ — "
+labels: ["errata"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Faleminderit që ndihmon ta bësh librin më të mirë. Plotëso sa të mundesh —
+        edhe një raportim i pjesshëm është i vlefshëm.
+
+  - type: dropdown
+    id: lloji
+    attributes:
+      label: Ku është gabimi?
+      options:
+        - Në tekstin e librit (shpjegim, gabim shtypi, gjuhë)
+        - Në kodin e shtypur në libër (nuk kompilohet, nuk punon)
+        - Në daljen e shtypur (programi shtyp diçka tjetër)
+        - Në kodin e këtij repo-je
+        - Tjetër
+    validations:
+      required: true
+
+  - type: input
+    id: faqja
+    attributes:
+      label: Faqja / kapitulli / detyra
+      description: P.sh. "faqja 47, Detyra 4.6" ose "Kapitulli 12, fletë referimi".
+      placeholder: "faqja ___, Detyra ___"
+    validations:
+      required: true
+
+  - type: textarea
+    id: gabimi
+    attributes:
+      label: Çfarë është shtypur / çfarë ndodh
+      description: Kopjoje rreshtin ashtu siç është në libër, ose përshkruaj çfarë bën programi.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sakte
+    attributes:
+      label: Si duhej të ishte (nëse e di)
+      description: Nëse s'je i sigurt, lëre bosh — mjafton ta kesh treguar problemin.
+
+  - type: input
+    id: mjedisi
+    attributes:
+      label: Mjedisi (vetëm për gabime kodi)
+      description: Versioni i .NET dhe mjedisi ku e provove.
+      placeholder: ".NET 10, Visual Studio 2026, Windows 11"

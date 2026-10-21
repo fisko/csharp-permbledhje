@@ -1,0 +1,32 @@
+# Build
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+
+# Bazat e të dhënave të gjeneruara (kap. 15)
+*.db
+*.db-shm
+*.db-wal
+
+# Skedarët e krijuar nga programet (kap. 14)
+*.log
+notat.csv
+studentet.csv
+kaluesit.csv
+regjistri.csv
+emrat.txt
+ditari.log
+
+# Visual Studio / VS Code / Rider
+.vs/
+.vscode/
+.idea/
+*.suo
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+student.txt
+!src/Kap14-SystemIO/14-02-LexoCsv/studentet.csv
